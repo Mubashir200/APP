@@ -1,0 +1,119 @@
+/* General styling */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background: linear-gradient(135deg, #74ebd5, #ACB6E5);
+}
+
+/* Header styling for P.E.S POLYTECHNIC */
+header {
+    width: 100%;
+    padding: 20px;
+    text-align: center;
+    background-color: #003366;
+    color: white;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 36px; /* Larger font size */
+    font-weight: 800; /* Bold weight */
+    letter-spacing: 2px; /* Spacing between letters */
+    text-transform: uppercase; /* All caps for a formal look */
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Subtle shadow effect */
+    animation: glow 1.5s infinite alternate; /* Optional glowing effect */
+}
+
+/* Glowing animation */
+@keyframes glow {
+    from {
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3), 0 0 10px #007bff, 0 0 20px #007bff, 0 0 30px #007bff;
+    }
+    to {
+        text-shadow: 2px 2px 5px rgba(255, 255, 255, 0.6), 0 0 15px #0056b3, 0 0 30px #0056b3, 0 0 45px #0056b3;
+    }
+}
+
+/* Container for form and dashboard */
+.container {
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 30px;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.1);
+    width: 90%;
+    max-width: 400px;
+    border-radius: 15px;
+}
+
+h3 {
+    text-align: center;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Form labels, inputs, and buttons */
+label {
+    display: block;
+    margin: 10px 0 5px;
+    color: #555;
+}
+
+input[type="text"], input[type="password"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+input[type="text"]:focus, input[type="password"]:focus, input[type="date"]:focus, select:focus {
+    border-color: #007bff;
+    outline: none;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    border: none;
+    border-radius: 8px;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.btn {
+    background-color: #007bff;
+    color: white;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+
+.btn-exit {
+    background-color: #ff4d4d;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-exit:hover {
+    background-color: #d11a2a;
+}
+
+/* Mobile responsive */
+@media (max-width: 600px) {
+    .container {
+        width: 100%;
+        padding: 20px;
+    }
+}
