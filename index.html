@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>P.E.S POLYTECHNIC Attendance System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>P.E.S POLYTECHNIC</h1>
+    </header>
+
+    <div class="container">
+
+        <div id="loginForm">
+            <h3>Login</h3>
+            <label for="userType">Select User Type:</label>
+            <select id="userType">
+                <option value="admin">Admin</option>
+                <option value="student">Student</option>
+            </select>
+
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username">
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" placeholder="Enter your password">
+            
+            <label>
+                <input type="checkbox" id="showPassword" onclick="togglePassword()"> Show Password
+            </label>
+
+            <button class="btn" onclick="login()">Login</button>
+        </div>
+
+        <div id="adminDashboard" style="display: none;">
+            <h3>Admin Dashboard</h3>
+            <label for="studentName">Student Name:</label>
+            <input type="text" id="studentName" placeholder="Enter student name">
+
+            <label for="attendanceDate">Date:</label>
+            <input type="date" id="attendanceDate">
+
+            <button class="btn" onclick="markAttendance()">Mark Attendance</button>
+            <button class="btn-exit" onclick="logout()">Exit</button>
+
+            <div id="attendanceStatus"></div>
+        </div>
+
+        <div id="studentDashboard" style="display: none;">
+            <h3>Student Dashboard</h3>
+            <p>Welcome, <span id="studentNameDisplay"></span></p>
+            
+            <!-- Attendance table with no initial data -->
+            <h4>Your Attendance Record:</h4>
+            <table id="attendanceTable">
+                <tr>
+                    <th>Date</th>
+                    <th>Status</th>
+                </tr>
+                <!-- Dynamic attendance rows will be inserted here in the future -->
+            </table>
+
+            <button class="btn-exit" onclick="logout()">Exit</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
